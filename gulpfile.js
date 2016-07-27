@@ -4,10 +4,12 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
-const ghPages = require('gulp-gh-pages');
+var ghPages = require('gulp-gh-pages');
 var options = {
     branch: "master",
-    origin: "origin"
+    origin: "origin",
+    remoteUrl: "https://github.com/patinotech/patinotech.github.io.git",
+    message: "Update from dev branch [timestamp]"
     // The origin key is the name of the remote.
 };
 
