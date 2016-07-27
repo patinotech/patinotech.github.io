@@ -8,9 +8,9 @@ var ghPages = require('gulp-gh-pages');
 var options = {
     branch: "master",
     origin: "origin",
-    remoteUrl: "https://github.com/patinotech/patinotech.github.io.git",
-    message: "Update from dev branch [timestamp]"
+    remoteUrl: "git@github.com:patinotech/patinotech.github.io.git"
     // The origin key is the name of the remote.
+    // Add the ssh and register rsa key
 };
 
 const $ = gulpLoadPlugins();
