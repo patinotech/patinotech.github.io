@@ -4,9 +4,20 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
+const ghPages = require('gulp-gh-pages');
+var options = {
+    branch: "master",
+    origin: "origin"
+    // The origin key is the name of the remote.
+};
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages(options));
+});
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
