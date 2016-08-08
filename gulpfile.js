@@ -96,7 +96,9 @@ gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
     '!app/*.html',
-    'app/CNAME'
+    'app/CNAME',
+    'app/other-vender/jquery.scrolly.min.js',
+    'app/other-vender/util.js'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
